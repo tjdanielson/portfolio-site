@@ -1,12 +1,16 @@
 const AboutMe = () => {
   return (
     <div className="mt-20 ml-10 text-center md:flex md:item-top ">
-      <div className="w-1/2 m-auto md:flex-wrap md:ml-20">
-        <h1 className="text-4xl md:text-7xl text-accent text-start">Hi.</h1>
-        <h2 className="text-4xl md:text-7xl text-accent text-start">
-          I'm Tessa
-        </h2>
-        <div className="text-center text-start ml-1 md:mt-4">
+      <div className="md:w-1/2 m-auto md:flex-wrap md:ml-20">
+        <div className="flex md:block">
+          <h1 className="text-4xl md:text-7xl text-accent md:text-start mr-1">
+            Hi.
+          </h1>
+          <h2 className="text-4xl md:text-7xl text-accent md:text-start">
+            I'm Tessa
+          </h2>
+        </div>
+        <div className="text-start md:text-center md:text-start md:ml-1 md:mt-4">
           <a href="https://www.linkedin.com/in/tessa-danielson/">
             <span className="fa-brands fa-linkedin-in mr-4"></span>
           </a>
@@ -17,7 +21,7 @@ const AboutMe = () => {
         </div>
       </div>
 
-      <div className="w-1/2 m-auto mt-2 justify-start text-left">
+      <div className="m-0 md:w-1/2 md:m-auto mt-2 justify-start text-left">
         <p>
           I'm a Full Stack Software Developer building custom application
           solutions for unique - and not so unique - business problems.
