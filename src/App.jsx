@@ -7,7 +7,7 @@ import Work from "./Components/Work";
 
 function App() {
   return (
-    <div>
+    <div className="max-w-5xl m-auto">
       <Navigation />
       <Routes>
         <Route path="/" element={<AboutMe />} />

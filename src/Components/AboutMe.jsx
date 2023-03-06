@@ -1,7 +1,7 @@
 const AboutMe = () => {
   return (
-    <div className="mt-20 ml-10 text-center md:flex md:item-top ">
-      <div className="md:w-1/2 m-auto md:flex-wrap md:ml-20">
+    <div className="mt-20 text-center md:flex md:item-top">
+      <div className="md:w-1/2 m-auto md:flex-wrap">
         <div className="flex md:block">
           <h1 className="text-4xl md:text-7xl text-accent md:text-start mr-1">
             Hi.
