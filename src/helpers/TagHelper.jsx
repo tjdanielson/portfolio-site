@@ -20,6 +20,10 @@ const TagHelper = (tag) => {
       return <div className="badge badge-primary m-1">Python</div>;
     case "Django":
       return <div className="badge badge-primary m-1">Django</div>;
+    case "HTML":
+      return <div className="badge badge-warning m-1">HTML</div>;
+    case "CSS":
+      return <div className="badge badge-warning m-1">CSS</div>;
     default:
       return null;
   }

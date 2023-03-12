@@ -4,18 +4,26 @@ const AboutMe = () => {
       <div className="md:w-1/2 m-auto md:flex-wrap">
         <div className="flex md:block">
           <h1 className="text-4xl md:text-7xl text-accent md:text-start mr-1">
-            Hi.
+            Hi,
           </h1>
-          <h2 className="text-4xl md:text-7xl text-accent md:text-start">
+          <h2 className="ml-1 text-4xl text-accent md:ml-0 md:text-7xl  md:text-start">
             I'm Tessa
           </h2>
         </div>
-        <div className="text-start md:text-center md:text-start md:ml-1 md:mt-4">
-          <a href="https://www.linkedin.com/in/tessa-danielson/">
+        <div className="text-start mt-2 md:text-center md:text-start md:ml-1 md:mt-4">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/tessa-danielson/"
+          >
             <span className="fa-brands fa-linkedin-in mr-4"></span>
           </a>
 
-          <a href="https://github.com/tjdanielson">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/tjdanielson"
+          >
             <span className="fa-brands fa-github"></span>
           </a>
         </div>
