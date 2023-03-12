@@ -1,55 +1,57 @@
 import litterpickers2 from "../assets/litterpickers2.png";
+import TagHelper from "../helpers/TagHelper";
 
 const Work = () => {
+  const workItems = [
+    {
+      title: "Day Job",
+      description:
+        "At my day job, I work on a team developing fullstack applications used by internal employees and customers.",
+      tags: [
+        "csharp",
+        ".net",
+        "Javascript",
+        "React",
+        "Typescript",
+        "Azure",
+        "DevOps",
+        "SQL",
+      ],
+    },
+    {
+      title: "LitterPickers",
+      description:
+        "A mobile friendly web-application for users to track how much they've cleaned up their communities.",
+      image: litterpickers2,
+      tags: ["Python", "Django", "Javascript", "React", "Typescript"],
+    },
+  ];
   return (
     <div>
-      <div className="hidden md:grid grid-cols-4 h-32 card bg-base-300 rounded-box place-items-start mt-10">
-        <div className="badge badge-primary m-1">Python</div>
-        <div className="badge badge-primary m-1">Django</div>
-        <div className="badge badge-secondary m-1">C#</div>
-        <div className="badge badge-secondary m-1">.NET</div>
-        <div className="badge badge-accent m-1">Javascript</div>
-        <div className="badge badge-accent m-1">React</div>
-        <div className="badge badge-accent m-1">Typescript</div>
-        <div className="badge badge-ghost m-1">Azure</div>
-        <div className="badge badge-ghost m-1">DevOps</div>
-        <div className="badge m-1">SQL</div>
-      </div>
-      <div className="flex flex-col w-full lg:flex-row mt-20">
-        <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
-          {/* <img className="object-scale-down" src={litterpickers2} /> */}
-        </div>
-        <div className="divider lg:divider-horizontal"></div>
-        <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
-          content
-        </div>
-      </div>
-      <div className="flex flex-col w-full lg:flex-row mt-20">
-        <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
-          content
-        </div>
-        <div className="divider lg:divider-horizontal"></div>
-        <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
-          content
-        </div>
-      </div>
-      <div className="flex flex-col w-full lg:flex-row mt-20">
-        <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
-          content
-        </div>
-        <div className="divider lg:divider-horizontal"></div>
-        <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
-          content
-        </div>
-      </div>
-      <div className="flex flex-col w-full lg:flex-row mt-20">
-        <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
-          content
-        </div>
-        <div className="divider lg:divider-horizontal"></div>
-        <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">
-          content
-        </div>
+      <div className="flex flex-col w-full border-opacity-50 mt-5">
+        {workItems?.map((x) => {
+          return (
+            <>
+              <div className="grid card bg-base-300 rounded-box place-items-center object-scale-down">
+                <div className="md:flex">
+                  <div>
+                    <p className="text-secondary">{x.title}</p>
+                    <p>{x.description}</p>
+                  </div>
+                  <div className="m-auto">
+                    {x.image && <img className="h-40 m-auto" src={x.image} />}
+                    <div className="flex-wrap">
+                      {x.tags.map((tag) => {
+                        return TagHelper(tag);
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="divider"></div>
+            </>
+          );
+        })}
       </div>
     </div>
   );
