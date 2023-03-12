@@ -34,9 +34,9 @@ const Work = () => {
             <>
               <div className="grid card bg-base-300 rounded-box place-items-center object-scale-down">
                 <div className="md:flex">
-                  <div>
+                  <div className="md:mr-10 md:mt-5">
                     <p className="text-secondary">{x.title}</p>
-                    <p>{x.description}</p>
+                    <p className="md:mt-2">{x.description}</p>
                   </div>
                   <div className="m-auto">
                     {x.image && <img className="h-40 m-auto" src={x.image} />}
